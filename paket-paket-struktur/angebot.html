@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Angebote - ADA Supermarkt</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<header>
+  <h1>ADA Supermarkt </h1>
+  <p>Unsere aktuellen Angebote</p>
+</header>
+
+<nav>
+  <a href="index.html">Start</a>
+  <a href="Produkte.html">Produkte</a>
+  <a href="Angebot.html">Angebot</a>
+  <a href="Reservierung.html">Reservierung</a>
+  <a href="Bäckerei.html">Bäckerei</a>
+  <a href="Kontakt.html">Kontakt</a>
+</nav>
+
+<div class="container" id="angeboteContainer">
+  <!-- Angebote werden hier dynamisch eingefügt -->
+</div>
+
+<footer>
+  <p>© 2026 ADA Supermarkt GmbH</p>
+</footer>
+
+<script src="angebote.js"></script>
+<script>
+  const container = document.getElementById('angeboteContainer');
+  angebote.forEach(item => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `<h2>${item.titel}</h2><p>${item.text}</p>`;
+    container.appendChild(card);
+  });
+</script>
+
+</body>
+</html>
